@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { UtensilsCrossed, Calendar, Clock, MapPin, MessageCircle, Users, Link2, Sparkles, Check } from 'lucide-react'
+import { UtensilsCrossed, Calendar, Clock, MessageCircle, Users, Link2, Sparkles, Check } from 'lucide-react'
 import { Input, Textarea } from '@/components/ui/FormField'
 import { DinnerAlbum } from '@/components/home/DinnerAlbum'
 import { submitDinnerApplication } from '@/lib/actions/forms'
@@ -20,8 +20,6 @@ const CONTENT: Record<Lang, {
   dateLabel: string
   date: string
   timeLabel: string
-  venueLabel: string
-  venue: string
   time: string
   priceText: string
   applyNow: string
@@ -73,8 +71,6 @@ const CONTENT: Record<Lang, {
     dateLabel: 'Date',
     date: '17 November 2026',
     timeLabel: 'Time',
-    venueLabel: 'Venue',
-    venue: 'Marriott Hotel, Tirana',
     time: '20:00',
     priceText: 'The participation fee is 199€.',
     applyNow: 'Apply now',
@@ -170,8 +166,6 @@ const CONTENT: Record<Lang, {
     dateLabel: 'Data',
     date: '17 Nëntor 2026',
     timeLabel: 'Ora',
-    venueLabel: 'Vendi',
-    venue: 'Marriott Hotel, Tiranë',
     time: '20:00',
     priceText: 'Tarifa e pjesëmarrjes është 199€.',
     applyNow: 'Apliko tani',
@@ -373,13 +367,6 @@ export function DinnerSection() {
               <div>
                 <p className="text-black/40 text-xs uppercase tracking-wider">{c.timeLabel}</p>
                 <p className="font-semibold text-brand-black">{c.time}</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 bg-brand-white border border-black/8 rounded-2xl px-5 py-4">
-              <MapPin size={22} className="text-brand-gold" strokeWidth={1.5} />
-              <div>
-                <p className="text-black/40 text-xs uppercase tracking-wider">{c.venueLabel}</p>
-                <p className="font-semibold text-brand-black">{c.venue}</p>
               </div>
             </div>
           </div>
