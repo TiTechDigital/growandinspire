@@ -10,9 +10,9 @@ const EVENTS = [
   },
   {
     initial: 'D',
-    date: 'MAY 15, 2026',
+    date: 'NOV 17, 2026',
     title: 'Dinner with Alketa',
-    location: 'Tirana, Albania',
+    location: 'Marriott Hotel, Tirana',
     cta: { text: 'Apply to Join →', href: '/dinner-with-alketa' },
   },
   {

@@ -33,8 +33,8 @@ const CONTENT: Record<Lang, {
     event: {
       title: 'Dinner with Alketa',
       type: 'Exclusive Dinner',
-      date: 'May 15, 2026',
-      location: 'Tirana, Albania',
+      date: 'November 17, 2026',
+      location: 'Marriott Hotel, Tirana',
       price: 'By application',
       capacity: '8-12 people',
       description: 'An exclusive executive dinner - curated conversations with purposeful leaders.',
@@ -58,8 +58,8 @@ const CONTENT: Record<Lang, {
     event: {
       title: 'Dinner with Alketa',
       type: 'Darkë Ekskluzive',
-      date: '15 Maj, 2026',
-      location: 'Tiranë, Shqipëri',
+      date: '17 Nëntor, 2026',
+      location: 'Marriott Hotel, Tiranë',
       price: 'Me aplikim',
       capacity: '8-12 persona',
       description: 'Një darkë ekskluzive ekzekutive - biseda të kuruara me liderë me qëllim.',
