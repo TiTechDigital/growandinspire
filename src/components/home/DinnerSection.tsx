@@ -6,7 +6,7 @@ import { Input, Textarea } from '@/components/ui/FormField'
 import { DinnerAlbum } from '@/components/home/DinnerAlbum'
 import { submitDinnerApplication } from '@/lib/actions/forms'
 import { useI18n } from '@/components/i18n/I18nProvider'
-import { isValidEmail, isValidPhone, isValidWebsite, isValidProfile } from '@/lib/validation'
+import { isValidEmail, isValidPhone, isValidProfile } from '@/lib/validation'
 import type { Lang } from '@/lib/i18n'
 
 const AWAITS_ICONS = [MessageCircle, Users, Link2, UtensilsCrossed, Sparkles]
@@ -291,7 +291,6 @@ export function DinnerSection() {
     // Require real contact details before sending.
     if (!isValidEmail(form.email)) return setError(c.errEmail)
     if (!isValidPhone(form.phone)) return setError(c.errPhone)
-    if (form.companyWebsite.trim() && !isValidWebsite(form.companyWebsite)) return setError(c.errWebsite)
     if (form.profileLink.trim() && !isValidProfile(form.profileLink)) return setError(c.errWebsite)
     setLoading(true)
     setError('')
@@ -445,7 +444,6 @@ export function DinnerSection() {
               <Input label={c.fields.email} type="email" required placeholder="email@juaj.com" value={form.email} onChange={(e) => set('email', e.target.value)} />
               <Input label={c.fields.phone} type="tel" required placeholder="+355 6X XXX XXXX" value={form.phone} onChange={(e) => set('phone', e.target.value)} />
               <Input label={c.fields.company} required value={form.company} onChange={(e) => set('company', e.target.value)} />
-              <Input label={c.fields.companyWebsite} value={form.companyWebsite} onChange={(e) => set('companyWebsite', e.target.value)} />
               <Input label={c.fields.profileLink} value={form.profileLink} onChange={(e) => set('profileLink', e.target.value)} />
               <Input label={c.fields.yearsInMarket} value={form.yearsInMarket} onChange={(e) => set('yearsInMarket', e.target.value)} />
               <Input label={c.fields.industry} value={form.industry} onChange={(e) => set('industry', e.target.value)} />

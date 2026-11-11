@@ -5,7 +5,7 @@ import { Input, Textarea } from '@/components/ui/FormField'
 import { Check } from 'lucide-react'
 import { submitDinnerApplication } from '@/lib/actions/forms'
 import { useI18n } from '@/components/i18n/I18nProvider'
-import { isValidEmail, isValidPhone, isValidWebsite, isValidProfile } from '@/lib/validation'
+import { isValidEmail, isValidPhone, isValidProfile } from '@/lib/validation'
 import type { Lang } from '@/lib/i18n'
 
 const CONTENT: Record<Lang, {
@@ -133,7 +133,6 @@ export function DinnerForm() {
     // Require real contact details before sending.
     if (!isValidEmail(form.email)) return setError(c.errEmail)
     if (!isValidPhone(form.phone)) return setError(c.errPhone)
-    if (form.companyWebsite.trim() && !isValidWebsite(form.companyWebsite)) return setError(c.errWebsite)
     if (form.profileLink.trim() && !isValidProfile(form.profileLink)) return setError(c.errWebsite)
     setLoading(true)
     setError('')
@@ -195,7 +194,6 @@ export function DinnerForm() {
           <Input label={f.city} value={form.city} onChange={(e) => set('city', e.target.value)} />
         </div>
         <Input label={f.company} required value={form.company} onChange={(e) => set('company', e.target.value)} />
-        <Input label={f.companyWebsite} value={form.companyWebsite} onChange={(e) => set('companyWebsite', e.target.value)} placeholder="https://..." />
         <Input label={f.profileLink} value={form.profileLink} onChange={(e) => set('profileLink', e.target.value)} />
         <Input label={f.yearsInMarket} value={form.yearsInMarket} onChange={(e) => set('yearsInMarket', e.target.value)} />
         <Input label={f.industry} value={form.industry} onChange={(e) => set('industry', e.target.value)} />
