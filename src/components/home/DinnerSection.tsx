@@ -23,6 +23,7 @@ const CONTENT: Record<Lang, {
   time: string
   priceText: string
   applyNow: string
+  saveTheDate: { label: string; title: string; date: string; city: string }
   communityTitle: string
   community: string[]
   curatedTitle: string
@@ -74,6 +75,7 @@ const CONTENT: Record<Lang, {
     time: '20:00',
     priceText: 'The participation fee is 199€.',
     applyNow: 'Apply now',
+    saveTheDate: { label: 'Save the date', title: 'Dinner with Alketa 4', date: '16 December', city: 'Berlin' },
     communityTitle: 'A CAREFULLY CREATED COMMUNITY',
     community: [
       'Dinner with Alketa is built on the belief that the greatest opportunities arise when the right people sit at the same table.',
@@ -169,6 +171,7 @@ const CONTENT: Record<Lang, {
     time: '20:00',
     priceText: 'Tarifa e pjesëmarrjes është 199€.',
     applyNow: 'Apliko tani',
+    saveTheDate: { label: 'Ruaje datën', title: 'Dinner with Alketa 4', date: '16 Dhjetor', city: 'Berlin' },
     communityTitle: 'NJË KOMUNITET I KRIJUAR ME KUJDES',
     community: [
       'Dinner with Alketa është ndërtuar mbi bindjen se mundësitë më të mëdha lindin kur njerëzit e duhur ulen në të njëjtën tavolinë.',
@@ -327,6 +330,13 @@ export function DinnerSection() {
   return (
     <section id="dinner" className="bg-brand-cream pt-28 lg:pt-40 pb-20 lg:pb-28 scroll-mt-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Save the date: Dinner with Alketa 4 */}
+        <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-brand-gold/40 bg-brand-white px-6 py-6 text-center shadow-sm">
+          <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-2">{c.saveTheDate.label}</p>
+          <p className="font-serif text-2xl lg:text-3xl font-bold text-brand-black">{c.saveTheDate.title}</p>
+          <p className="mt-2 text-brand-black text-lg font-medium">{c.saveTheDate.date} · {c.saveTheDate.city}</p>
+        </div>
+
         {/* Banner album (auto-rotating) */}
         <DinnerAlbum />
 
