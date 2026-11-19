@@ -10,7 +10,7 @@ const EVENTS = [
   },
   {
     initial: 'D',
-    date: 'DEC 16, 2026',
+    date: 'DEC 15, 2026',
     title: 'Dinner with Alketa 4',
     location: 'Berlin',
     cta: { text: 'Apply to Join →', href: '/dinner-with-alketa' },

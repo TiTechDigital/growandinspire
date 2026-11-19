@@ -33,7 +33,7 @@ const CONTENT: Record<Lang, {
     event: {
       title: 'Dinner with Alketa 4',
       type: 'Exclusive Dinner',
-      date: 'December 16, 2026',
+      date: 'December 15, 2026',
       location: 'Berlin',
       price: 'By application',
       capacity: '8-12 people',
@@ -58,7 +58,7 @@ const CONTENT: Record<Lang, {
     event: {
       title: 'Dinner with Alketa 4',
       type: 'Darkë Ekskluzive',
-      date: '16 Dhjetor, 2026',
+      date: '15 Dhjetor, 2026',
       location: 'Berlin',
       price: 'Me aplikim',
       capacity: '8-12 persona',
