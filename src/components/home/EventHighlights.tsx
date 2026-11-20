@@ -54,6 +54,10 @@ export function EventHighlights() {
                   <Users size={13} className="text-brand-gold-dark" />
                   8-12 persona · Me ftesë
                 </div>
+                <div className="flex items-center gap-2 text-black/40 text-sm">
+                  <span className="text-brand-gold-dark font-bold text-base">€</span>
+                  125€ për person
+                </div>
               </div>
               <Link
                 href="/dinner-with-alketa"
