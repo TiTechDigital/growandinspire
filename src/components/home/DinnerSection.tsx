@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { UtensilsCrossed, Calendar, Clock, MessageCircle, Users, Link2, Sparkles, Check } from 'lucide-react'
+import { UtensilsCrossed, Calendar, Clock, Euro, MessageCircle, Users, Link2, Sparkles, Check } from 'lucide-react'
 import { Input, Textarea } from '@/components/ui/FormField'
 import { DinnerAlbum } from '@/components/home/DinnerAlbum'
 import { submitDinnerApplication } from '@/lib/actions/forms'
@@ -21,7 +21,8 @@ const CONTENT: Record<Lang, {
   date: string
   timeLabel: string
   time: string
-  priceText: string
+  priceLabel: string
+  price: string
   applyNow: string
   communityTitle: string
   community: string[]
@@ -72,7 +73,8 @@ const CONTENT: Record<Lang, {
     date: '15 December 2026',
     timeLabel: 'Time',
     time: '20:00',
-    priceText: 'The participation fee is 125€.',
+    priceLabel: 'Price',
+    price: '125€',
     applyNow: 'Apply now',
     communityTitle: 'A CAREFULLY CREATED COMMUNITY',
     community: [
@@ -167,7 +169,8 @@ const CONTENT: Record<Lang, {
     date: '15 Dhjetor 2026',
     timeLabel: 'Ora',
     time: '20:00',
-    priceText: 'Tarifa e pjesëmarrjes është 125€.',
+    priceLabel: 'Çmimi',
+    price: '125€',
     applyNow: 'Apliko tani',
     communityTitle: 'NJË KOMUNITET I KRIJUAR ME KUJDES',
     community: [
@@ -366,6 +369,13 @@ export function DinnerSection() {
               <div>
                 <p className="text-black/40 text-xs uppercase tracking-wider">{c.timeLabel}</p>
                 <p className="font-semibold text-brand-black">{c.time}</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 bg-brand-white border border-black/8 rounded-2xl px-5 py-4">
+              <Euro size={22} className="text-brand-gold" strokeWidth={1.5} />
+              <div>
+                <p className="text-black/40 text-xs uppercase tracking-wider">{c.priceLabel}</p>
+                <p className="font-semibold text-brand-black">{c.price}</p>
               </div>
             </div>
           </div>
