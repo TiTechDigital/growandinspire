@@ -10,6 +10,9 @@ import { isValidEmail, isValidPhone, isValidProfile } from '@/lib/validation'
 import type { Lang } from '@/lib/i18n'
 
 const AWAITS_ICONS = [MessageCircle, Users, Link2, UtensilsCrossed, Sparkles]
+// Set to true to show the price on the page
+const SHOW_PRICE = false
+
 
 const CONTENT: Record<Lang, {
   badge: string
@@ -371,6 +374,7 @@ export function DinnerSection() {
                 <p className="font-semibold text-brand-black">{c.time}</p>
               </div>
             </div>
+            {SHOW_PRICE && (
             <div className="flex items-center gap-3 bg-brand-white border border-black/8 rounded-2xl px-5 py-4">
               <Euro size={22} className="text-brand-gold" strokeWidth={1.5} />
               <div>
@@ -378,6 +382,7 @@ export function DinnerSection() {
                 <p className="font-semibold text-brand-black">{c.price}</p>
               </div>
             </div>
+            )}
           </div>
           <button
             type="button"
