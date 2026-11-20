@@ -72,7 +72,7 @@ const CONTENT: Record<Lang, {
     date: '15 December 2026',
     timeLabel: 'Time',
     time: '20:00',
-    priceText: 'The participation fee is 199€.',
+    priceText: 'The participation fee is 125€.',
     applyNow: 'Apply now',
     communityTitle: 'A CAREFULLY CREATED COMMUNITY',
     community: [
@@ -167,7 +167,7 @@ const CONTENT: Record<Lang, {
     date: '15 Dhjetor 2026',
     timeLabel: 'Ora',
     time: '20:00',
-    priceText: 'Tarifa e pjesëmarrjes është 199€.',
+    priceText: 'Tarifa e pjesëmarrjes është 125€.',
     applyNow: 'Apliko tani',
     communityTitle: 'NJË KOMUNITET I KRIJUAR ME KUJDES',
     community: [
